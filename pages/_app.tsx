@@ -1,7 +1,7 @@
-import type { AppProps } from 'next/app'
-import { NextIntlClientProvider } from 'next-intl';
+import type { AppProps } from "next/app";
+import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
-import '../src/app/globals.css'
+import "../src/app/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,15 +16,17 @@ const geistMono = Geist_Mono({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextIntlClientProvider
-      locale={pageProps.locale || 'de'}
+      locale={pageProps.locale || "de"}
       messages={pageProps.messages}
-      timeZone={pageProps.timeZone || 'Europe/Berlin'}
+      timeZone={pageProps.timeZone || "Europe/Berlin"}
     >
-      <div className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <div
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Component {...pageProps} />
       </div>
     </NextIntlClientProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
