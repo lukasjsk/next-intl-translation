@@ -168,3 +168,6 @@ The Next.js application now supports:
 **Issue**: App Router i18n config only loading 'common' namespace, causing missing translations
 **Root Cause**: `i18n/request.ts` only loaded common namespace by default
 **Solution**: Updated to load all namespaces: `['common', 'navigation', 'forms', 'products']`
+
+## Memories
+- please check if memory is still up to date with what we created.
