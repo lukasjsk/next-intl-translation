@@ -1,0 +1,33 @@
+{
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt auf",
+    "description": "Wir freuen uns auf Ihre Nachricht und werden uns schnellstmöglich bei Ihnen melden.",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "subject": "Betreff",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "sent": "Nachricht gesendet!",
+    "error": "Fehler beim Senden der Nachricht",
+    "required": "Pflichtfeld",
+    "invalidEmail": "Ungültige E-Mail-Adresse",
+    "messageTooShort": "Nachricht ist zu kurz",
+    "success": "Nachricht erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
+    "address": {
+      "title": "Adresse",
+      "street": "Musterstraße 123",
+      "city": "12345 Musterstadt",
+      "country": "Deutschland"
+    }
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "minLength": "Mindestens {min} Zeichen erforderlich",
+    "maxLength": "Maximal {max} Zeichen erlaubt",
+    "phone": "Bitte geben Sie eine gültige Telefonnummer ein"
+  }
+}

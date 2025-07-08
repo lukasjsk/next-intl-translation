@@ -1,0 +1,38 @@
+{
+  "title": "Produkte",
+  "subtitle": "Unsere Lösungen für Ihr Unternehmen",
+  "buyNow": "Jetzt kaufen",
+  "tryFree": "Kostenlos testen",
+  "learnMore": "Mehr erfahren",
+  "features": "Funktionen",
+  "pricing": "Preise",
+  "price": "Preis",
+  "perMonth": "pro Monat",
+  "priceOnRequest": "Preis auf Anfrage",
+  "moreProducts": "Weitere Produkte",
+  "questions": {
+    "title": "Haben Sie Fragen?",
+    "description": "Unser Team hilft Ihnen gerne bei der Auswahl der richtigen Lösung.",
+    "contactUs": "Kontakt aufnehmen"
+  },
+  "categories": {
+    "premium": "Premium",
+    "basic": "Basis",
+    "enterprise": "Enterprise"
+  },
+  "features": {
+    "ui": "Intuitive Benutzeroberfläche",
+    "scalable": "Skalierbare Architektur",
+    "support": "24/7 Support",
+    "updates": "Automatische Updates",
+    "security": "Erweiterte Sicherheit",
+    "basic": "Grundfunktionen",
+    "emailSupport": "E-Mail Support",
+    "monthlyUpdates": "Monatliche Updates",
+    "standardSecurity": "Standardsicherheit",
+    "accountManager": "Dedizierter Account Manager",
+    "customIntegration": "Custom Integration",
+    "training": "Vor-Ort-Training",
+    "sla": "Service Level Agreement"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "home": "Startseite",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "products": "Produkte",
+  "services": "Dienstleistungen",
+  "blog": "Blog",
+  "menu": "Menü",
+  "openMenu": "Menü öffnen",
+  "closeMenu": "Menü schließen",
+  "search": "Suchen",
+  "searchPlaceholder": "Suche...",
+  "language": "Sprache",
+  "breadcrumb": {
+    "home": "Startseite",
+    "you_are_here": "Sie sind hier"
+  }
+}

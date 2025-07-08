@@ -1,0 +1,10 @@
+{
+  "welcome": "Welcome to Next.js",
+  "description": "A powerful React framework for building modern web applications",
+  "getStarted": "Get Started",
+  "documentation": "Documentation",
+  "examples": "Examples",
+  "footer": {
+    "copyright": "© 2024 Next.js Translations Demo"
+  }
+}

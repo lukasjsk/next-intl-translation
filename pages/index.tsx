@@ -1,9 +1,17 @@
+import { GetStaticProps } from 'next'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
 import Image from "next/image";
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 
 export default function Home() {
-  const t = useTranslations('common');
+  const { t } = useTranslation('common')
+  const router = useRouter()
+
+  const changeLanguage = (locale: string) => {
+    router.push(router.asPath, router.asPath, { locale })
+  }
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -15,10 +23,26 @@ export default function Home() {
           height={38}
           priority
         />
-        <div className="bg-blue-50 p-4 rounded-lg mb-8">
-          <p className="text-blue-800">
-            📍 Diese Seite nutzt den App Router
-          </p>
+        
+        <div className="flex gap-4 mb-8">
+          <button
+            onClick={() => changeLanguage('en')}
+            className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            English
+          </button>
+          <button
+            onClick={() => changeLanguage('de')}
+            className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Deutsch
+          </button>
+          <button
+            onClick={() => changeLanguage('fr')}
+            className="px-4 py-2 border rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Français
+          </button>
         </div>
 
         <h1 className="text-4xl font-bold text-center sm:text-left">
@@ -28,21 +52,6 @@ export default function Home() {
         <p className="text-lg text-center sm:text-left max-w-2xl">
           {t('description')}
         </p>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">Navigation zu Pages Router:</h2>
-          <div className="flex gap-4 flex-wrap">
-            <Link href="/about" className="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700">
-              Über uns (Pages Router)
-            </Link>
-            <Link href="/contact" className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
-              Kontakt (Pages Router)
-            </Link>
-            <Link href="/products/1" className="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">
-              Produkte (Pages Router)
-            </Link>
-          </div>
-        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -70,10 +79,8 @@ export default function Home() {
           </a>
         </div>
       </main>
+      
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <div className="text-sm text-gray-500 mr-4">
-          {t('footer.copyright')}
-        </div>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -119,7 +126,18 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+        <div className="text-sm text-gray-500">
+          {t('footer.copyright')}
+        </div>
       </footer>
     </div>
-  );
+  )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale || 'en', ['common'])),
+    },
+  }
 }

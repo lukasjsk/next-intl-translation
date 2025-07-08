@@ -1,0 +1,18 @@
+{
+  "welcome": "Willkommen bei Next.js",
+  "description": "Ein mächtiges React-Framework für moderne Webanwendungen",
+  "getStarted": "Erste Schritte",
+  "documentation": "Dokumentation",
+  "examples": "Beispiele",
+  "backToHome": "Zurück zur Startseite",
+  "loading": "Lädt...",
+  "error": "Es ist ein Fehler aufgetreten",
+  "retry": "Erneut versuchen",
+  "save": "Speichern",
+  "cancel": "Abbrechen",
+  "submit": "Senden",
+  "close": "Schließen",
+  "footer": {
+    "copyright": "© 2024 Next.js Translations Demo"
+  }
+}
