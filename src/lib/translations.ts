@@ -38,7 +38,7 @@ const loadTranslationFromFile = async (namespace: TranslationNamespace): Promise
       return await response.json();
     } else {
       // Server-side: use dynamic import
-      const translations = await import(`../public/locales/de/${namespace}.json`);
+      const translations = await import(`../../public/locales/de/${namespace}.json`);
       return translations.default || translations;
     }
   } catch (error) {

@@ -20,7 +20,7 @@
     "basic": "Basis",
     "enterprise": "Enterprise"
   },
-  "features": {
+  "featureList": {
     "ui": "Intuitive Benutzeroberfläche",
     "scalable": "Skalierbare Architektur",
     "support": "24/7 Support",
